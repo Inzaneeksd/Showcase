@@ -13,11 +13,25 @@
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://cdn.tiny.cloud/1/hlaucnjtm62q2mbwenuj5937m2owjupg7iysmkxfowl2f8z6/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+
 </head>
 
 <body>
 
 
+
+<form method="post">
+	<textarea id="mytextarea">Hello, World!</textarea>
+</form>
+
+<script>
+	tinymce.init({
+		selector: '#mytextarea'
+	});
+</script>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
