@@ -4,8 +4,8 @@ require "settings/init.php";
 if(!empty($_POST["data"])){
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO film (filmNavn, filmBeskrivelse) VALUES(:filmNavn, :filmBeskrivelse)";
-    $bind = [":filmNavn" => $data["filmNavn"], ":filmBeskrivelse" => $data["filmBeskrivelse"]];
+    $sql = "INSERT INTO film (filmNavn, filmBeskrivelse, filmPris) VALUES(:filmNavn, :filmBeskrivelse, :filmPris)";
+    $bind = [":filmNavn" => $data["filmNavn"], ":filmBeskrivelse" => $data["filmBeskrivelse"], ":filmPris" => $data["filmPris"]];
 
     $db->sql($sql, $bind, false);
 
@@ -42,6 +42,10 @@ if(!empty($_POST["data"])){
         <div class="col-12 col-md-6">
             <label for="filmNavn">Film navn</label>
             <input class="form-control" type="text" name="data[filmNavn]" id="filmNavn" placeholder="Film navn" value="">
+        </div>
+        <div class="col-12 col-md-6">
+            <label for="filmPris">Film pris</label>
+            <input class="form-control" type="number" step="0.1" name="data[filmPris]" id="filmPris" placeholder="Film pris" value="">
         </div>
         <div class="col-12">
             <div class="form-group">
