@@ -26,21 +26,33 @@ $film1 = $db->sql("SELECT * FROM film");
     </head>
 
 <body>
-<?php
 
-foreach ($film1 as $film){
-    ?>
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <?php
-            echo $film->filmNavn;
-            ?>
+<!--<div class="container">
+    <section class="menu">
+        <div class="movie-list">
+            <div class="movie-group">
+                <h2>Movie list:</h2>
+                <ul class="movies">
+                    <?php foreach ($film1 as $film){ ?>
+                        <li>
+                            <a href="http://localhost:63342/Showcase/Film.php?id=<?php echo $film->filmId; ?>"> <?php echo $film->filmNavn; ?>  </a>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
         </div>
-        <div class="col-12 col-md-6">
-            <?php
-            echo number_format($film->filmPris, 2, ",", ".") . "<br>";
-            ?>
-        </div>
+    </section>
+</div> */ -->
+
+<div class="container mt-3 mb-3">
+    <div class="row row-cols-5 g-3">
+        <?php foreach ($film1 as $film){ ?>
+            <div class="card col">
+                <a href="http://localhost:63342/Showcase/Film.php?id=<?php echo $film->filmId; ?>"> <img class="card-img filmbillede" src="<?php echo $film->filmBillede; ?>"> </a>
+                <div class="card-img-overlay">
+                    <a href="http://localhost:63342/Showcase/Film.php?id=<?php echo $film->filmId; ?>"> <?php echo $film->filmNavn; ?>  </a>
+                </div>
+            </div>
+        <?php } ?>
     </div>
-    <?php
-}
+</div>
