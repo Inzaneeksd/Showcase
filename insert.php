@@ -47,6 +47,7 @@ if(!empty($_POST["data"])){
 
 <body>
 
+<div class="container">
 <form method="post" action="insert.php" enctype="multipart/form-data">
     <div class="row">
         <div class="col-12">
@@ -76,7 +77,7 @@ if(!empty($_POST["data"])){
         </div>
     </div>
 </form>
-
+</div>
 
 
 <form method="post">

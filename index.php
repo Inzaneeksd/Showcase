@@ -30,7 +30,6 @@ $film1 = $db->sql("SELECT * FROM film");
 
 foreach ($film1 as $film){
     ?>
-
     <div class="row">
         <div class="col-12 col-md-6">
             <?php
