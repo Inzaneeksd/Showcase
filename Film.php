@@ -43,7 +43,7 @@ foreach ($film1 as $film){
         <b>Pris:</b> <?php echo $film->filmPris; ?> <br><br>
         <h4>Beskrivelse:</h4> <?php echo $film->filmBeskrivelse; ?> <br><br>
       </div>
-      <div class="col-md-3"> <a class="btn btn-dark" href="/Showcase/index.php?"> Tilbage </a> </div>
+      <div class="col-md-3"> <a class="btn btn-dark" href="/index.php?"> Tilbage </a> </div>
     </div>
   </div>
     <?php
