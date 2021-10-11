@@ -48,9 +48,9 @@ $film1 = $db->sql("SELECT * FROM film");
     <div class="row row-cols-5 g-3">
         <?php foreach ($film1 as $film){ ?>
             <div class="card col">
-                <a href="http://localhost:63342/Showcase/Film.php?id=<?php echo $film->filmId; ?>"> <img class="card-img filmbillede" src="<?php echo $film->filmBillede; ?>"> </a>
+                <a href="/Showcase/Film.php?id=<?php echo $film->filmId; ?>"> <img class="card-img filmbillede" src="<?php echo $film->filmBillede; ?>"> </a>
                 <div class="card-img-overlay">
-                    <a href="http://localhost:63342/Showcase/Film.php?id=<?php echo $film->filmId; ?>"> <?php echo $film->filmNavn; ?>  </a>
+                    <a href="/Showcase/Film.php?id=<?php echo $film->filmId; ?>"> <?php echo $film->filmNavn; ?>  </a>
                 </div>
             </div>
         <?php } ?>
